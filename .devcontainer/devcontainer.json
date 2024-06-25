@@ -1,12 +1,9 @@
 
 {
 	"name": "Flask Dev Container",
-	"dockerFile": "Dockerfile",
-	"extensions": [
-	  "ms-python.python",
-	  "ms-python.vscode-pylance"
-	],
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+	
 	"forwardPorts": [5000],
-	"postCreateCommand": "flask db init && flask db migrate && flask db upgrade"
-	  
+	//"postCreateCommand": "flask db init && flask db migrate && flask db upgrade"
+	"postCreateCommand": "pip install -r requirements.txt"  
 }

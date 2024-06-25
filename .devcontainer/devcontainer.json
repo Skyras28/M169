@@ -1,0 +1,12 @@
+
+{
+	"name": "Flask Dev Container",
+	"dockerFile": "Dockerfile",
+	"extensions": [
+	  "ms-python.python",
+	  "ms-python.vscode-pylance"
+	],
+	"forwardPorts": [5000],
+	"postCreateCommand": "flask db init && flask db migrate && flask db upgrade"
+	  
+}

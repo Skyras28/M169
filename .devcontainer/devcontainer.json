@@ -1,24 +1,18 @@
-
 {
-	"name": "Flask Dev Container",
-	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
-	
-	"forwardPorts": [8000],
-	//"postCreateCommand": "flask db init && flask db migrate && flask db upgrade"
-	"postCreateCommand": "pip install -r requirements.txt", 
-
-		
-	"portsAttributes": {
-		"8000": {
-			"label": "API"
-		}
-	},
-
-		"customizations": {
-		"vscode": {
-			"extensions": [
-				"humao.rest-client"
-			]
-		}
-	}
+  "name": "FastAPI Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+  "forwardPorts": [8000],
+  "postCreateCommand": "pip install -r requirements.txt && sqlite3 test.db < test_data.sql",
+  "portsAttributes": {
+    "8000": {
+      "label": "API"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "humao.rest-client"
+      ]
+    }
+  }
 }

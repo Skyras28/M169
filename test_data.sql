@@ -1,2 +1,3 @@
-INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com');
-INSERT INTO users (name, email) VALUES ('Jane Doe', 'jane@example.com');
+INSERT INTO words (word, requested) VALUES ('Apfel', 0);
+INSERT INTO words (word, requested) VALUES ('Auto', 0);
+INSERT INTO words (word, requested) VALUES ('Berlin', 0);

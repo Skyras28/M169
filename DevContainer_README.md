@@ -23,3 +23,22 @@ Die `.env` Datei sollte folgendes Format haben:
 
 ```plaintext
 DATABASE_URL=sqlite:///test.db
+
+
+### 6. docker-compose.yml
+Erstelle ein `docker-compose.yml`, um das Projekt in der Produktion zu starten.
+
+**docker-compose.yml**:
+
+```yaml
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///prod.db
+    volumes:
+      - .:/workspace

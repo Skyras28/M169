@@ -21,7 +21,7 @@ Die Anwendung ist jetzt unter `http://localhost:8000` verfügbar.
 ## Struktur der `.env` Datei
 Die `.env` Datei sollte folgendes Format haben:
 
-```plaintext
+```plaintext```
 DATABASE_URL=sqlite:///test.db
 
 
@@ -30,7 +30,7 @@ Erstelle ein `docker-compose.yml`, um das Projekt in der Produktion zu starten.
 
 **docker-compose.yml**:
 
-```yaml
+```yaml```
 version: '3.8'
 
 services:

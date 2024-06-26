@@ -5,5 +5,20 @@
 	
 	"forwardPorts": [8000],
 	//"postCreateCommand": "flask db init && flask db migrate && flask db upgrade"
-	"postCreateCommand": "pip install -r requirements.txt"  
+	"postCreateCommand": "pip install -r requirements.txt", 
+
+		
+	"portsAttributes": {
+		"8000": {
+			"label": "API"
+		}
+	},
+
+		"customizations": {
+		"vscode": {
+			"extensions": [
+				"humao.rest-client"
+			]
+		}
+	}
 }
